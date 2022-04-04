@@ -2,11 +2,11 @@
 
 
 FROM microsoft/dotnet:2.1-sdk AS build
-ENV ASPNETCORE_URLS http://*:44319
+
 
 ENV ASPNETCORE_ENVIRONMENT=Development #Add this line.
 
-EXPOSE 44319
+EXPOSE 4441
 WORKDIR /src
 COPY ["webApi/webApi.csproj", "webApi/"]
 RUN dotnet restore "webApi/webApi.csproj"
